@@ -4,15 +4,28 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./index.css">
-    <title>Cage Matcher</titlle></title>
+		<link rel="stylesheet" href="./index.css">
+		<link href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+    <title>Cage Matcher</title>
 </head>
 <body>
-    <h1 class="title">Nicholas Cage-Match</h1>
+		<script src="./app.js" async defer></script>
+		<div class="timer-bar">
+			<div id="progress-bar" class="progress-bar"></div>
+		</div>
+		<div id="overlay" onclick="GameStart()" class="overlay-text visible">Click to Start</div>
+		<div id="victory-overlay" onclick="NewGame()" class="overlay-text">
+			Victory!
+			<div class="play-again">Click to Play Again</div>
+		</div>
+		<div id="failure-overlay" onclick="NewGame()" class="overlay-text">
+				You Lose!
+				<div class="play-again">Click to Play Again</div>
+			</div>
+
+    <h1 class="title">NICHOLAS CAGE-MATCH</h1>
     <div class="container">
-        <div class="game-info-container">
-        	info
-        </div>
+        
         <div class="card">
 					<div  id="1" onclick="CardClick()" class="card-back card-face"></div>
 					<img src="https://i.pinimg.com/originals/50/cb/08/50cb085f28faa563a5e286ecadd3d1bf.jpg"
@@ -104,6 +117,5 @@
 								id="img9" class="card-front card-face"></img>
 				</div>
     </div>
-    <script src="./app.js" async defer></script>
 </body>
 </html>

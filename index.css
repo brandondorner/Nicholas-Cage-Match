@@ -1,10 +1,69 @@
 body{
     margin: 0;
+    background-image: url(https://www.wwe.com/f//2018/12/20171118_nxt_cage--b83f034340960491767049aebd014901.jpg);
+    background-size: cover;
+    overflow: hidden;
+}
+
+.title{
+    color: #f4503a;
+    -webkit-text-stroke-width: 0.4px;
+    -webkit-text-stroke-color: black;
+    font-size:7vw;
+    margin-bottom: 0px;
+    padding-bottom: 0px;
+    margin-top: 0px;
+    padding-top: 0px;
+    font-family: 'Alfa Slab One', cursive;
+
+}
+
+.timer-bar{
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+
+#progress-bar{
+    height: 5px;
+    width: 1%;
+    background-color: red;
+    display: none;
+}
+
+.visible#progress-bar{
+    display: block;
 }
 
 .title{
     display: flex;
     justify-content: center;
+}
+
+.overlay-text{
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    flex-direction: column;
+    font-size: 25vh;
+    color: rgb(187, 231, 222);
+    background-color: rgba(0,0,0,.8);
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color:  rgb(130, 161, 155)
+}
+
+.overlay-text.visible{
+    display: flex;
+}
+
+.play-again{
+    font-size: 10vh;
+    align-items: center;
 }
 
 .game-info-container{
@@ -20,6 +79,7 @@ body{
     margin: 50px auto;
     justify-content: center;
     perspective: 500px;
+    margin-top: 10px;
 }
 
 .card{
