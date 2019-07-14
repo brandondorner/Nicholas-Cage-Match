@@ -15,7 +15,7 @@ body{
 
 .container{
     display:grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(6, auto);
     grid-gap: 3px;
     margin: 50px auto;
     justify-content: center;
@@ -24,8 +24,8 @@ body{
 
 .card{
     position: relative;
-    height: 175px;
-    width: 125px;
+    height: 150px;
+    width: 120px;
     border-radius: 5px 5px 5px 5px;
 
 }
