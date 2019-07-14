@@ -27,6 +27,7 @@ body{
     height: 175px;
     width: 125px;
     border-radius: 5px 5px 5px 5px;
+
 }
 
 .card-face{
@@ -40,10 +41,11 @@ body{
     backface-visibility: hidden;
     border-radius: 5px 5px 5px 5px;
 
+
 }
 
 
-.card:hover .card-back{
+.card:hover :not(.card-front) .card-back{
     background-color: rgb(21, 138, 114);
     transition: background-color 0.2s;
 }
@@ -69,4 +71,13 @@ body{
 .card-front{
     background-color: black;
     transform: rotateY(180deg);
+}
+
+.clicked .card-front{
+    transition: transform 500ms ease-in-out;
+}
+
+.clicked .card-back{
+    transition: transform 500ms ease-in-out;
+
 }
