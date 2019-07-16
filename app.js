@@ -4,6 +4,8 @@ let card2 = ''
 let matchTracker=0
 
 function GameStart(){
+  startSound.play()
+  crowd.play()
   shuffle()
   document.getElementById('overlay').classList.remove('visible');
   
@@ -15,8 +17,11 @@ function GameStart(){
   function frame(){
     if (percentDone >= 100){
       clearInterval(interval)
+      crowd.pause()
       document.getElementById('failure-overlay').classList.add('visible')
     } else if (matchTracker === 9){
+      crowd.pause()
+      champ.play()
       clearInterval(interval)
     } else {
       percentDone+= 0.1;
@@ -58,6 +63,7 @@ function CardClick (){
     
     }else if (card1 === imgSrc){
       //match true
+      newSound();
       cardFlipAmount = 0
       console.log('2')
       matchTracker ++
@@ -113,3 +119,32 @@ function shuffle() { //fisher-yates
     document.getElementById(j+1).nextElementSibling.src = imgArray[j]
     }
 }
+
+let startSound = new Audio('/cage-match-mp3/cage-match.mp3')
+let champ = new Audio('/cage-match-mp3/champ.mp3')
+let crowd = new Audio('/cage-match-mp3/crowd.mp3')
+crowd.volume = 0.3;
+
+function newSound(){
+  sound = new Audio(sounds[Math.floor(Math.random() * (sounds.length) )])
+  sound.play()
+}
+
+let sounds = [
+  '/cage-match-mp3/broken.mp3',
+  '/cage-match-mp3/bunny.mp3',
+  '/cage-match-mp3/chair.mp3',
+  '/cage-match-mp3/congratulation.mp3',
+  '/cage-match-mp3/declaration.mp3',
+  '/cage-match-mp3/legs.mp3',
+  '/cage-match-mp3/rock.mp3',
+  '/cage-match-mp3/newguy.mp3',
+  '/cage-match-mp3/women.mp3',
+  '/cage-match-mp3/ohh.mp3',
+  '/cage-match-mp3/admiring.mp3',
+  '/cage-match-mp3/cage.mp3',
+  '/cage-match-mp3/entrails.mp3',
+  '/cage-match-mp3/horn.mp3',
+  '/cage-match-mp3/burned.mp3',
+  '/cage-match-mp3/ohmygod.mp3',
+]
