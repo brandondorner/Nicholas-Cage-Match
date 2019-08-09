@@ -1,0 +1,22 @@
+{
+  "name": "nicholas-cage-matcher",
+  "version": "1.0.0",
+  "description": "A card matching game with a Nicholas Cage / wretling theme",
+  "main": "app.js",
+  "scripts": {
+    "start": "serve"
+  },
+  "dependencies": {
+    "serve": "^10.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/brandondorner/Nicholas-Cage-Match.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/brandondorner/Nicholas-Cage-Match/issues"
+  },
+  "homepage": "https://github.com/brandondorner/Nicholas-Cage-Match#readme"
+}
