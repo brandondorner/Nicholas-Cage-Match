@@ -59,13 +59,11 @@ function CardClick (){
     if (cardFlipAmount === 1){
       card1 = imgSrc
       card2 = element
-      console.log('1')
     
     }else if (card1 === imgSrc){
       //match true
       newSound();
       cardFlipAmount = 0
-      console.log('2')
       matchTracker ++
       if (matchTracker === 9){
         setTimeout(function(){
@@ -81,7 +79,6 @@ function CardClick (){
         card2.classList.remove('visible')
         card1 = ''
         card2 = ''
-        console.log('3')
       }, 1000)
 
     }
@@ -115,14 +112,14 @@ function shuffle() { //fisher-yates
     [imgArray[i], imgArray[j]] = [imgArray[j], imgArray[i]]; // swap elements
 
     document.getElementById(i + 1).nextElementSibling.src = imgArray[i]
-    console.log(j+1)
+    // console.log(j+1)
     document.getElementById(j+1).nextElementSibling.src = imgArray[j]
     }
 }
 
-let startSound = new Audio('/cage-match-mp3/cage-match.mp3')
-let champ = new Audio('/cage-match-mp3/champ.mp3')
-let crowd = new Audio('/cage-match-mp3/crowd.mp3')
+let startSound = new Audio('./cage-match-mp3/cage-match.mp3')
+let champ = new Audio('./cage-match-mp3/champ.mp3')
+let crowd = new Audio('./cage-match-mp3/crowd.mp3')
 crowd.volume = 0.3;
 
 function newSound(){
@@ -131,20 +128,20 @@ function newSound(){
 }
 
 let sounds = [
-  '/cage-match-mp3/broken.mp3',
-  '/cage-match-mp3/bunny.mp3',
-  '/cage-match-mp3/chair.mp3',
-  '/cage-match-mp3/congratulation.mp3',
-  '/cage-match-mp3/declaration.mp3',
-  '/cage-match-mp3/legs.mp3',
-  '/cage-match-mp3/rock.mp3',
-  '/cage-match-mp3/newguy.mp3',
-  '/cage-match-mp3/women.mp3',
-  '/cage-match-mp3/ohh.mp3',
-  '/cage-match-mp3/admiring.mp3',
-  '/cage-match-mp3/cage.mp3',
-  '/cage-match-mp3/entrails.mp3',
-  '/cage-match-mp3/horn.mp3',
-  '/cage-match-mp3/burned.mp3',
-  '/cage-match-mp3/ohmygod.mp3',
+  './cage-match-mp3/broken.mp3',
+  './cage-match-mp3/bunny.mp3',
+  './cage-match-mp3/chair.mp3',
+  './cage-match-mp3/congratulation.mp3',
+  './cage-match-mp3/declaration.mp3',
+  './cage-match-mp3/legs.mp3',
+  './cage-match-mp3/rock.mp3',
+  './cage-match-mp3/newguy.mp3',
+  './cage-match-mp3/women.mp3',
+  './cage-match-mp3/ohh.mp3',
+  './cage-match-mp3/admiring.mp3',
+  './cage-match-mp3/cage.mp3',
+  './cage-match-mp3/entrails.mp3',
+  './cage-match-mp3/horn.mp3',
+  './cage-match-mp3/burned.mp3',
+  './cage-match-mp3/ohmygod.mp3',
 ]
